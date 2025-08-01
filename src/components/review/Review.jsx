@@ -49,7 +49,7 @@ const Review = () => {
           </div>
           <div className="review-card" data-aos="fade-up">
             <div className="review-card-img-container">
-              <img src="/photo-1624797432677-6f803a98acb3.jpg" alt="" />
+              <img src="/black3.jpg" alt="" />
               <div className="review-card-rating-container">
                 <div className="rate-icon-container">
                   <AiTwotoneStar />

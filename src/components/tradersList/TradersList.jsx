@@ -129,7 +129,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/photo-1624797432677-6f803a98acb3.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/black2.jpg" alt="" className="traderListProfilePicture" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     john

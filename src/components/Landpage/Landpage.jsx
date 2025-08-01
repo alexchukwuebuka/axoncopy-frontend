@@ -33,7 +33,7 @@ const Landpage = () => {
                     transition={{duration:0.65,delay:0.4}} onClick={()=>{
                         navigate('/signup')
                     }} >
-                  <span>start now!</span>
+                  <span>get started</span>
                 </motion.button>
             </motion.div>
               <div className="landpage-img-container">

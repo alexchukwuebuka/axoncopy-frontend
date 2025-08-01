@@ -69,6 +69,15 @@
   background: linear-gradient(to right, rgb(103, 88, 31), rgb(142, 112, 5));
   color: ghostwhite;
   overflow: hidden;
+  font-family: "Palanquin",
+    'Poppins',
+    'Montserrat',
+    sans-serif,
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
 }
 
 .cssbuttons-io svg {
@@ -165,7 +174,7 @@
 
   .landpage-text-container {
     text-align: center;
-    width: 85%;
+    width: 95%;
     align-self: center;
     padding-left: 0px;
     text-align: left;
@@ -178,7 +187,7 @@
   }
 
   .landpage-text-container h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
     width: 100%;
   }

@@ -260,7 +260,7 @@ const Signup = async () => {
           e.preventDefault()
           checkDetails()
         }}>
-          <img src="/boardbanklogo6.png" alt="" className="signup-logo" onClick={() => {
+          <img src="/axoncopylogo1.png" alt="" className="signup-logo" onClick={() => {
             navigate('/')
           }} />
           <span class="subtitle">Get started with Axoncopy, just create an account and enjoy the experience.</span>
