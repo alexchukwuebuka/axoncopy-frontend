@@ -19,7 +19,7 @@ const Terms = () => {
             <div className="review-card-container team-card-container">
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/gregory-gill-4Bf5LNEPqZ0-unsplash.jpg" alt="" />
+                  <img src="/28.jpg" alt="" />
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>founder</small>
@@ -41,7 +41,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/blackInvestor.jpeg" alt="" />
+                  <img src="/34.jpg" alt="" />
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>manager</small>
@@ -52,7 +52,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/coporate-woman.jpg" alt="" />
+                  <img src="/39.jpg" alt="" />
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>custormer care</small>
@@ -63,7 +63,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/istockphoto-1133598770-170667a.jpg" alt="" />
+                  <img src="/61.jpg" alt="" />
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>portfolio manager</small>
@@ -74,7 +74,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/cop-woman.jpg" alt="" />
+                  <img src="/44.jpg" alt="" />
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>receptionist</small>
