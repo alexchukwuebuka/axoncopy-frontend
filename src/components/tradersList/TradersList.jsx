@@ -1,6 +1,8 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './traderslist.css'
 const TradersList = () => {
+  const navigate = useNavigate()
+
   return (
     <section className='TraderListSection'>
       <div className="traderListSectionWrapper">
@@ -23,7 +25,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>
@@ -52,7 +56,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>
@@ -81,7 +87,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>
@@ -110,7 +118,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>
@@ -139,7 +149,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>
@@ -168,7 +180,9 @@ const TradersList = () => {
                   </p>
                 </span>
               </div>
-              <div className="copyBtn">
+              <div className="copyBtn" onClick={() => {
+                navigate('/signup')
+              }}>
                   <p>copy</p>
               </div>
             </div>

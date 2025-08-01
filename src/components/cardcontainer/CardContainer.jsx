@@ -4,7 +4,7 @@ import {TfiPieChart} from 'react-icons/tfi'
 import {BsBarChartLine} from 'react-icons/bs'
 import {BiNetworkChart} from 'react-icons/bi'
 import {GiChart} from 'react-icons/gi'
-import {MdOutlineAddchart} from 'react-icons/md'
+import { MdOutlineAddchart } from 'react-icons/md'
 
 const CardContainer = () => {
   return (

@@ -61,7 +61,7 @@
     color: rgb(128, 128, 128);
 }
 .copyBtn{
-    padding: 2px 15px 5px 15px;
+    padding: 2px 15px 2px 15px;
     border-radius: 15px;
     background-color: rgb(86, 209, 135);
     cursor: pointer;
