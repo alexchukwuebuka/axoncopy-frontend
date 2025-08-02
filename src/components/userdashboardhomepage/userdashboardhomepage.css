@@ -1,12 +1,10 @@
 .homewrapper {
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    /* border: 2px solid red;
-    padding: 10px; */
 }
 
 .dashboardhomepage {
@@ -15,7 +13,7 @@
     align-items: center;
     justify-content: center;
     margin: 0px;
-    background-color: var(--primary-color);
+    background-color: black;
     align-self: flex-start;
     margin-left: auto;
     height: auto;
@@ -92,7 +90,7 @@
 }
 .notification-card{
     width: 100%;
-    border: 2px dotted rgb(73, 103, 178);
+    border: 2px dotted rgb(96, 96, 96);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -100,32 +98,33 @@
     padding: 15px;
 }
 .close-notification-container{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: white;
-    border: 2px dotted rgb(73, 103, 178);
+    border: 2px dotted rgb(96, 96, 96);
     font-size: 1.5rem;
-    color: rgb(73, 103, 178);
+    color: rgb(96, 96, 96);
     cursor: pointer;
 }
 .notification-card p a{
-    color: rgb(73, 103, 178);
+    color: #E6B80B;
+    margin: 0px 10px;
 }
 .dashboard-overview-container{
     width: 100%;
     border-radius: 30px;
     height: auto;
-    background-color: rgb(6, 19, 41);
+    background-color: black;
     margin: 30px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    border: 2px solid rgb(15, 31, 89);
+    border: 2px solid rgb(43, 43, 43);
 }
 .upper-overview-card{
     width: 100%;
@@ -150,7 +149,7 @@
     align-self: flex-start;
 }
 .main-balance{
-    color: rgb(172, 172, 172);
+    color: #E6B80B;
 }
 .amount{
     display: flex;
@@ -165,7 +164,7 @@
 }
 .usd-btn{
     padding: 5px 15px;
-    background-color: rgb(15, 31, 89);
+    background-color: rgb(43, 43, 43);
     color: white;
     border-radius: 15px;
     display: flex;
@@ -207,9 +206,9 @@
 .user-deposit-btn {
     display: inline-block;
     border-radius: 15px;
-    background-color: rgb(15, 31, 89);
+    background-color: rgb(43, 43, 43);
     border: none;
-    color: #FFFFFF;
+    color: #E6B80B;
     text-align: center;
     font-size: 1rem;
     padding: 12px 20px;
@@ -254,13 +253,13 @@
 
 .lower-overview-card{
     width: 45%;
-    border: 1px solid rgb(15, 31, 89);
+    border: 1px solid rgb(43, 43, 43);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 10px;
-    background-color: rgb(15, 31, 89);
+    background-color: rgb(43, 43, 43);
 }
 .lower-card-icon-container{
     width: 20%;
@@ -284,8 +283,8 @@
     border-radius: 20px;
     padding: 30px 20px;
     height: 500px;
-    background-color: rgb(6, 19, 41);
-    border: 2px solid rgb(15, 31, 89);
+    background-color: black;
+    border: 2px solid rgb(43, 43, 43);
     margin-top: 40px;
 }
 .referral-section {
@@ -294,10 +293,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 20px;
-    background-color: rgb(6, 19, 41);
+    background-color: black;
     margin-top: 30px;
     border-radius: 20px;
-    border: 2px solid rgb(15, 31, 89);
+    border: 2px solid rgb(43, 43, 43);
 }
 
 .invite-btn {
@@ -307,7 +306,7 @@
 
 .referral-card1 {
     width: 45%;
-    background-color: rgb(4, 25, 60);
+    background-color: rgb(43, 43, 43);
     padding: 0px 20px;
     min-height: 200px;
     display: flex;
@@ -471,14 +470,16 @@
         padding: 10px;
     }
     .notification-card {
-        border: 2px dotted rgb(73, 103, 178);
+        border: 2px dotted rgb(43, 43, 43);
         padding: 10px 10px;
     }
     
     .close-notification-container{
-        height: 40px;
-        border:1.5px dotted rgb(73, 103, 178) ;
+        height: 50px;
+        width: 50px;
+        border:1.5px dotted rgb(43, 43, 43) ;
         margin: 10px 0px;
+        font-size: 1.2rem;
     }
     .header-userprofile-container{
         background-color: rgb(18, 18, 18);
@@ -502,7 +503,7 @@
         text-align: left;
     }
     .close-notification-container{
-        font-size: 1rem;
+        font-size: 1.5rem;
         border-radius: 15px;
     }
     .upper-overview-card{
