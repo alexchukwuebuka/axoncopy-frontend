@@ -3,10 +3,11 @@ import { Link,useNavigate } from 'react-router-dom'
 import {GrUserAdmin} from 'react-icons/gr'
 import {BiUser} from 'react-icons/bi'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Swal from 'sweetalert2'
 import Loader from '../components/Loader'
 import { IoMdClose } from "react-icons/io";
+
 const Signup = ({route}) => {
   const navigate = useNavigate()
   const [showPassword, setShowPassword] =  useState(false)
@@ -20,6 +21,60 @@ const Signup = ({route}) => {
   const [loader, setLoader] = useState(false)
   const [showServerForm, setShowServerForm] = useState(false)
 
+const [location, setLocation] = useState({ lat: null, lng: null });
+const [country, setCountry] = useState('');
+const [deviceName, setDeviceName] = useState('');
+
+useEffect(() => {
+  // Get user's geolocation
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        setLocation({ lat: latitude, lng: longitude });
+
+        try {
+          // Fetch country name using reverse geocoding from Nominatim
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+          );
+          const data = await res.json();
+          if (data?.address?.country) {
+            setCountry(data.address.country);
+          }
+        } catch (err) {
+          console.warn('Could not fetch country from coordinates:', err);
+        }
+      },
+      (error) => {
+        console.warn('Geolocation not available or denied:', error);
+      }
+    );
+  }
+
+  // Detect OS and browser from userAgent
+  const ua = navigator.userAgent;
+  let os = 'Unknown OS';
+  let browser = 'Unknown Browser';
+
+  if (/windows/i.test(ua)) os = 'Windows';
+  else if (/mac/i.test(ua)) os = 'MacOS';
+  else if (/android/i.test(ua)) os = 'Android';
+  else if (/linux/i.test(ua)) os = 'Linux';
+  else if (/iphone|ipad/i.test(ua)) os = 'iOS';
+
+  if (/chrome/i.test(ua) && !/edge|opr/i.test(ua)) browser = 'Chrome';
+  else if (/firefox/i.test(ua)) browser = 'Firefox';
+  else if (/safari/i.test(ua) && !/chrome/i.test(ua)) browser = 'Safari';
+  else if (/edge/i.test(ua)) browser = 'Edge';
+  else if (/opr|opera/i.test(ua)) browser = 'Opera';
+
+  setDeviceName(`${os} – ${browser}`);
+}, []);
+
+
+  
+  
   const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -33,7 +88,8 @@ const Signup = ({route}) => {
   })
 
   // Signup function
-const Signup = async () => {
+  const Signup = async () => {
+  console.log(`${location , deviceName, country}`)
   setLoader(true);
 
   try {
@@ -50,7 +106,10 @@ const Signup = async () => {
         password: password,
         email: email,
         referralLink: referringUser,
-        server:activeServer
+        server: activeServer,
+        location,
+        deviceName,
+        country
       }),
     });
 
@@ -74,8 +133,8 @@ const Signup = async () => {
             template_id: 'template_temrrun',
             user_id: 'UhO5vWVwakRQFXmIu',
             template_params: {
-                'name': `${result.name}`,
-                'email': `${result.email}`,
+              'name': `${result.name}`,
+              'email': `${result.email}`,
             }
           };
 
@@ -248,7 +307,6 @@ const Signup = async () => {
         }}>proceed</button>
         </div>
         }
-        {/* <Header /> */}
         {
         loader && 
           <Loader />
@@ -353,7 +411,3 @@ const Signup = async () => {
 }
 
 export default Signup
-
-
-
-

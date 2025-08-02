@@ -642,7 +642,7 @@ button {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.578);
+    background-color: rgba(0, 0, 0, 0.517);
     z-index: 30;
     flex-direction: column;
     overflow: auto;
