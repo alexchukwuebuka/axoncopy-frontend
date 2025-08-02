@@ -892,7 +892,7 @@ const Admindashboard = ({ route }) => {
                   <div className="failure-page no-referral-page">
                     <img src="/preview.gif" alt="" className='failure-img'/>
                     <p>no registered user yet</p>
-                    <Link to='/admin'>home</Link>
+                    <Link to='/'>home</Link>
                   </div>
                   </div>
                 }
