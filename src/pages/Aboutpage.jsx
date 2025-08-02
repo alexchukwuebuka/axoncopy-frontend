@@ -14,10 +14,6 @@ const Aboutpage = () => {
     <>
     <main className='about-page-land'>
     <Header />
-      <section className='about-landpage my-about'>
-        <div className="about-page-text">
-        </div>
-      </section>
       <Copytrade />
       <TradeInfo />
       <Why />
