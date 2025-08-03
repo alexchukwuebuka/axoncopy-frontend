@@ -162,7 +162,7 @@ const AdminHeader = ({route,openCreateTrader,openTraderLogs,openUsers}) => {
                       <div className="dashboard-svg-container">
                           <GrLineChart />
                       </div>
-                    <Link to='/admin'>logout</Link>
+                    <Link to='/login'>logout</Link>
                 </li>
             </div>
         </aside>
