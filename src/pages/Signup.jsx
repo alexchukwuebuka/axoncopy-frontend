@@ -149,7 +149,6 @@ useEffect(() => {
                 'subject':`${result.adminSubject}`
             }
         };
-         
           if (result.referringUser === null) {
                 const sendMail= async()=>{
                 await Promise.all([
