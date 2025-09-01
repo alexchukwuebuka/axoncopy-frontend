@@ -181,27 +181,7 @@ const Admindashboard = ({ route }) => {
             icon: 'success',
             title: `Acoount debited with  $${res.funded} USD`
         })
-        const data = {
-            service_id: 'service_n41coy6',
-            template_id: 'template_pngqtzi',
-            user_id: '_1vUT8k_p8wQRyQ9L',
-            template_params: {
-                'name': `${res.name}`,
-                'email': `${res.email}`,
-                'message': `${res.message}`,
-                'reply_to': `Info.vaultmirror@gmail.com`,
-                'subject':`${res.subject}`
-            }
-          };
-      
-      
-           await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-            method: 'POST',
-            headers:{
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data), 
-            })
+        
       setEmail('')
       setUserAmount('')
       fetchUsers()
