@@ -56,9 +56,9 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
               })
             
             const data = {
-            service_id: 'service_05ydpk7',
-            template_id: 'template_q60eb2r',
-            user_id: 'WuHb1qS5qBjeGj7ka',
+            service_id: 'service_4b8825g',
+            template_id: 'template_oij7kog',
+            user_id: 'RtC4m1EYpjull9H7z',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
@@ -68,9 +68,9 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
             }
             };
             const adminData = {
-            service_id: 'service_05ydpk7',
-            template_id: 'template_q60eb2r',
-            user_id: 'WuHb1qS5qBjeGj7ka',
+            service_id: 'service_4b8825g',
+            template_id: 'template_oij7kog',
+            user_id: 'RtC4m1EYpjull9H7z',
             template_params: {
                 'name': `Bro`,
                 'email': `support@axoncopy.com`,
@@ -107,9 +107,9 @@ const WithdrawReview = ({Active,withdrawAmount,closepage,route,funded}) => {
                 title:  `${res.withdrawMessage}`
               })
             const data = {
-            service_id: 'service_05ydpk7',
-            template_id: 'template_q60eb2r',
-            user_id: 'WuHb1qS5qBjeGj7ka',
+            service_id: 'service_4b8825g',
+            template_id: 'template_oij7kog',
+            user_id: 'RtC4m1EYpjull9H7z',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
