@@ -234,10 +234,10 @@ const Admindashboard = ({ route }) => {
       })
 
       const res = await req.json()
-      if (res.status === 'OK') {
+      if (res.status === 'ok') {
           Toast.fire({
           icon: 'success',
-          title: `approval email sent`
+          title: `withdrawal Approved!`
         })
       } else {
         Toast.fire({
