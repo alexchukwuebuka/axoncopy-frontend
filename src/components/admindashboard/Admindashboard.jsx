@@ -224,8 +224,13 @@ const Admindashboard = ({ route }) => {
                 'subject':`successful withdrawal`
             }
       };
+
+      Toast.fire({
+      icon: 'success',
+      title: `withdrawal Approved!`
+      })
       
-      const req = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      await fetch('https://api.emailjs.com/api/v1.0/email/send', {
             method: 'POST',
             headers:{
               'Content-Type': 'application/json'
@@ -233,18 +238,8 @@ const Admindashboard = ({ route }) => {
             body: JSON.stringify(data), 
       })
 
-      const res = await req.json()
-      if (res.status === 'ok') {
-          Toast.fire({
-          icon: 'success',
-          title: `withdrawal Approved!`
-        })
-      } else {
-        Toast.fire({
-          icon: 'error',
-          title: `email quota exceeded for the day`
-        })
-      } 
+     
+      
     }
     else {
       Toast.fire({
