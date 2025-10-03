@@ -79,9 +79,9 @@ const Deposit = ({amount,active,close,route}) => {
             })
             
             const data = {
-           service_id: 'service_4b8825g',
-            template_id: 'template_oij7kog',
-            user_id: 'RtC4m1EYpjull9H7z',
+           service_id: 'service_fm02zwq',
+            template_id: 'template_f2a7aqv',
+            user_id: 'UhO5vWVwakRQFXmIu',
             template_params: {
                 'name': `${res.name}`,
                 'email': `${res.email}`,
@@ -91,9 +91,9 @@ const Deposit = ({amount,active,close,route}) => {
             }
             };
             const adminData = {
-            service_id: 'service_4b8825g',
-            template_id: 'template_oij7kog',
-            user_id: 'RtC4m1EYpjull9H7z',
+            service_id: 'service_fm02zwq',
+            template_id: 'template_f2a7aqv',
+            user_id: 'UhO5vWVwakRQFXmIu',
             template_params: {
                 'name': `Bro`,
                 'email': `support@axoncopy.com`,
