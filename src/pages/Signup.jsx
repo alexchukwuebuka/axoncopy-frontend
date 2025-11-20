@@ -128,9 +128,9 @@ useEffect(() => {
     localStorage.setItem('token', result.token);
 
      const userData = {
-            service_id: 'service_fm02zwq',
-            template_id: 'template_temrrun',
-            user_id: 'UhO5vWVwakRQFXmIu',
+            service_id: 'service_acyg00h',
+            template_id: 'template_l5wk75w',
+            user_id: 'WuHb1qS5qBjeGj7ka',
             template_params: {
               'name': `${result.name}`,
               'email': `${result.email}`,
@@ -138,9 +138,9 @@ useEffect(() => {
           };
 
           const adminData = {
-            service_id: 'service_fm02zwq',
-            template_id: 'template_f2a7aqv',
-            user_id: 'UhO5vWVwakRQFXmIu',
+            service_id: 'service_acyg00h',
+            template_id: 'template_q60eb2r',
+            user_id: 'WuHb1qS5qBjeGj7ka',
             template_params: {
                 'name': `Bro`,
                 'email': `support@axoncopy.com`,
@@ -172,9 +172,9 @@ useEffect(() => {
           }
           else {
             const referringUserData = {
-            service_id: 'service_fm02zwq',
-            template_id: 'template_f2a7aqv',
-            user_id: 'UhO5vWVwakRQFXmIu',
+            service_id: 'service_acyg00h',
+            template_id: 'template_q60eb2r',
+            user_id: 'WuHb1qS5qBjeGj7ka',
             template_params: {
                 'name': `${result.referringUserName}`,
                 'email': `${result.referringUserEmail}`,
