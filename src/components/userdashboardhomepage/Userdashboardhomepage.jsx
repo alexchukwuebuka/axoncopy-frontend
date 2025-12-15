@@ -12,6 +12,7 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import TeslaWidget from '../TeslaWidget'
 import MobileDropdown from '../MobileDropdown';
 import { formatCurrency } from '../../utils';
+import '../userdashboardtransactions/userdashboardtransactions.css';
 
 const Userdashboardhomepage = ({ route }) => {
   const navigate = useNavigate()
@@ -76,8 +77,15 @@ const Userdashboardhomepage = ({ route }) => {
   useEffect(() => {
     // Run this only when both traders and userData.trader are ready
     if (userData?.trades.length > 0 && userData) {
-
-      const dailytrades = userData.trades.filter(trade => trade.date === today)
+      const isSameDate = (date1, date2) => {
+        const d1 = new Date(date1);
+        const d2 = new Date(date2);
+        return d1.getDate() === d2.getDate() &&
+          d1.getMonth() === d2.getMonth() &&
+          d1.getFullYear() === d2.getFullYear();
+      };
+      const dailytrades = userData.trades.filter(trade => isSameDate(trade.date, new Date()));
+      // const dailytrades = userData.trades.filter(trade => trade.date === today)
 
       console.log("daily trades:", dailytrades);
       setDailyTrades(dailytrades);
@@ -234,12 +242,12 @@ const Userdashboardhomepage = ({ route }) => {
                 <div className="trader-card-image-container">
 
                   <img src={`${userData
-                      ? userData.funded > 20000
-                        ? '/diamond.png'
-                        : userData.funded > 5000
-                          ? '/download-removebg-preview (2).png'  // Gold image
-                          : '/images-removebg-preview.png'        // Silver image
-                      : ''
+                    ? userData.funded > 20000
+                      ? '/diamond.png'
+                      : userData.funded > 5000
+                        ? '/download-removebg-preview (2).png'  // Gold image
+                        : '/images-removebg-preview.png'        // Silver image
+                    : ''
                     }`}
                     alt=""
                     className='trader-card-image'
@@ -247,12 +255,12 @@ const Userdashboardhomepage = ({ route }) => {
                 </div>
                 <div className="trader-card-text-container">
                   <h3 className="trader-name">{`${userData
-                      ? userData.funded > 20000
-                        ? 'Diamond'
-                        : userData.funded > 5000
-                          ? 'gold'  // Gold 
-                          : 'silver'        // Silver 
-                      : ''
+                    ? userData.funded > 20000
+                      ? 'Diamond'
+                      : userData.funded > 5000
+                        ? 'gold'  // Gold 
+                        : 'silver'        // Silver 
+                    : ''
                     }`} </h3>
                   <p className="trader-description">Rank</p>
                 </div>
@@ -262,23 +270,23 @@ const Userdashboardhomepage = ({ route }) => {
                   <div className="trader-performance-item">
                     <p className="performance-label">capital Range</p>
                     <p className="performance-value my-value">{`${userData
-                        ? userData.funded > 20000
-                          ? '$20,001 - unlimited' //diamond
-                          : userData.funded > 5000
-                            ? '$5001- $20,000'  // Gold 
-                            : '$0- $5,000'        // Silver 
-                        : ''
+                      ? userData.funded > 20000
+                        ? '$20,001 - unlimited' //diamond
+                        : userData.funded > 5000
+                          ? '$5001- $20,000'  // Gold 
+                          : '$0- $5,000'        // Silver 
+                      : ''
                       }`}</p>
                   </div>
                   <div className="trader-performance-item">
                     <p className="performance-label">bonus</p>
                     <p className="performance-value my-value">{`${userData
-                        ? userData.funded > 20000
-                          ? '$500' //diamond
-                          : userData.funded > 5000
-                            ? '$100'  // Gold 
-                            : '$50'   // Silver 
-                        : ''
+                      ? userData.funded > 20000
+                        ? '$500' //diamond
+                        : userData.funded > 5000
+                          ? '$100'  // Gold 
+                          : '$50'   // Silver 
+                      : ''
                       }`}</p>
                   </div>
                 </div>
