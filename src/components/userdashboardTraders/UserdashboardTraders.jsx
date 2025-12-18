@@ -163,6 +163,42 @@ const UserdashboardTraders = ({ route }) => {
   }
 
 
+  const stopcopyTrade = async (trader) => {
+    
+      setLoader(true)
+    const req = await fetch(`${route}/api/stopcopytrade`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'x-access-token': localStorage.getItem('token')
+      },
+      body: JSON.stringify({
+        trader:trader._id
+      }),
+    })
+      const res = await req.json()
+      
+    
+    if (res.status === 200) {
+      Toast.fire({
+      icon: 'success',
+      title: `${res.message}`,
+      });
+      
+      getData();
+      setLoader(false)
+    }
+    else {
+      Toast.fire({
+      icon: 'error',
+      title: `${res.message}`,
+      });
+      getData();
+      setLoader(false)
+    }
+  }
+
+
   const closeMobileMenu = () => {
     setShowMobileDropdown(false)
   }
@@ -250,41 +286,40 @@ const UserdashboardTraders = ({ route }) => {
               <h2 className="traders-showcase-header">expert traders</h2>
               <p>choose from the list of our expert traders. Any trader you select would trade and manage your portfolio.</p>
             </div>
-            {myTrader &&
-              <div className="active-trader-container" >
-                <div className="videoframe-text-container treader-header">
-                  <h1>Your current <span className="highlight">trader</span></h1>
-                </div>
-                <div className="traders-card active-trader-card">
-                  <div className="trader-card-header">
-                    <div className="trader-card-image-container">
-                      <img src={`${myTrader.traderImage}`} alt="" className='trader-card-image' />
-                    </div>
-                    <div className="trader-card-text-container">
-                      <h3 className="trader-name">{myTrader.firstname}</h3>
-                      <p className="trader-description">{myTrader.lastname}</p>
-                    </div>
-                  </div>
-                  <div className="trader-perfomance-container">
-                    <div className="trader-performance">
-                      <div className="trader-performance-item">
-                        <p className="performance-label">Win Rate</p>
-                        <p className="performance-value"><MdCandlestickChart /> {myTrader.profitrate}%</p>
+            { myTrader && 
+                    <div className="active-trader-container" >
+                      <div className="videoframe-text-container treader-header">
+                        <h1>Your current <span className="highlight">trader</span></h1>
                       </div>
-                      <div className="trader-performance-item">
-                        <p className="performance-label">Average Return</p>
-                        <p className="performance-value"><MdOutlineShowChart /> {myTrader.averagereturn}</p>
-                      </div>
-                      <div className="trader-performance-item">
-                        <p className="performance-label">Minimum trading capital</p>
-                        <p className="performance-value"><MdOutlineShowChart /> ${formatCurrency(myTrader.minimumcapital)}</p>
+                      <div className="traders-card active-trader-card">
+                        <div className="trader-card-header active-trader-card-header">
+                          <div className="trader-card-image-container">
+                            <img src={`${myTrader.traderImage}`} alt="" className='trader-card-image' />
+                          </div>
+                          <div className="trader-card-text-container">
+                            <h3 className="trader-name">{myTrader.firstname}</h3>
+                            <p className="trader-description">{myTrader.lastname}</p>
+                            <button onClick={()=>stopcopyTrade(myTrader)}>stop copying</button>
+                          </div>
+                        </div>
+                        <div className="trader-perfomance-container">
+                          <div className="trader-performance">
+                            <div className="trader-performance-item">
+                              <p className="performance-label">Win Rate</p>
+                              <p className="performance-value"><MdCandlestickChart /> {myTrader.profitrate}%</p>
+                            </div>
+                            <div className="trader-performance-item">
+                              <p className="performance-label">Average Return</p>
+                              <p className="performance-value"><MdOutlineShowChart /> {myTrader.averagereturn}</p>
+                            </div>
+                            <div className="trader-performance-item">
+                              <p className="performance-label">Minimum trading capital</p>
+                              <p className="performance-value"><MdOutlineShowChart /> ${myTrader.minimumcapital}</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-
 
             }
 
