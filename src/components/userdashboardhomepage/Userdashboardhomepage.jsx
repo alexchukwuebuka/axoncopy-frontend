@@ -76,19 +76,9 @@ const Userdashboardhomepage = ({ route }) => {
 
   useEffect(() => {
     // Run this only when both traders and userData.trader are ready
-    if (userData?.trades.length > 0 && userData) {
-      const isSameDate = (date1, date2) => {
-        const d1 = new Date(date1);
-        const d2 = new Date(date2);
-        return d1.getUTCDate() === d2.getUTCDate() &&
-          d1.getUTCMonth() === d2.getUTCMonth() &&
-          d1.getUTCFullYear() === d2.getUTCFullYear();
-      };
-      const dailytrades = userData.trades.filter(trade => isSameDate(trade.date, new Date()));
-      // const dailytrades = userData.trades.filter(trade => trade.date === today)
-
-      console.log("daily trades:", dailytrades);
-      setDailyTrades(dailytrades);
+    if (userData?.trades?.length > 0 && userData) {
+      console.log("Displaying all trades");
+      setDailyTrades(userData.trades);
     }
   }, [userData]);
 
@@ -189,49 +179,6 @@ const Userdashboardhomepage = ({ route }) => {
         <div className="dashboard-chart-container">
           <TeslaWidget />
         </div>
-        {/* <div className="referral-section">
-                <div className="referral-card1">
-                    <div className="referraltext-wrapper">
-                        <div className="referral-text-container">
-                            <h2>refer us and earn 10% of every downline deposit</h2>
-                            <p>Use the bellow link to invite your friends.</p>
-                        </div>
-                        <button className="invite-btn">invite</button>
-                    </div>
-                    <div className="click-to-copy-container">
-                        <span className='clipboard-btn'>
-                            <FiLink />
-                        </span>
-                        <input type="text" value={userData ? `www.apexcopytrade.com/user/${userData.username ? userData.username : userData.referral}` : ''} ref={clipRef}/>
-                        <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
-                            copy()
-                            setClipBoard(!clipBoard)
-                              }}>   
-                            {
-                                clipBoard ?
-                                <MdOutlineDone /> : <MdOutlineContentCopy />
-                            }
-                        </span>
-                    </div>  
-                </div>
-                <div className="referral-card1">
-                    <div className="referraltext-wrapper">
-                        <div className="referral-text-container">
-                            <h2>my referral</h2>
-                        </div>
-                        <div className="referral-text-container small-card">
-                            <h2>{userData ? userData.referred.length : '      '}</h2>
-                            <p>referred users</p>
-                        </div>
-                        <div className="referral-text-container small-card">
-                            <h2>{userData ? userData.refBonus : '        '} USD</h2>
-                            <p>referral commission</p>
-                        </div>
-
-                    </div>
-                    <img src="/bar4.png" alt="" className="bar4" />
-                </div>
-            </div> */}
         <div className="current-rank-section">
           <div className="active-trader-container">
             <div className="videoframe-text-container treader-header">
@@ -297,9 +244,9 @@ const Userdashboardhomepage = ({ route }) => {
         {userData && dailyTrades.length !== 0 ?
           <div className="page-swiper-wrapper trans-page">
             <div className="page-header">
-              <h3>checkout your Daily trade logs</h3>
-              <h2>Daily trade logs</h2>
-              <p>we keep track of all the trades taken by your trader daily</p>
+              <h3>checkout your trade logs</h3>
+              <h2>Trade logs</h2>
+              <p>we keep track of all the trades taken by your trader</p>
             </div>
             <div className="transaction-container no-ref">
               <table>
