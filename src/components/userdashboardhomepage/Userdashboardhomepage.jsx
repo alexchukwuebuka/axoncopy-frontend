@@ -80,9 +80,9 @@ const Userdashboardhomepage = ({ route }) => {
       const isSameDate = (date1, date2) => {
         const d1 = new Date(date1);
         const d2 = new Date(date2);
-        return d1.getDate() === d2.getDate() &&
-          d1.getMonth() === d2.getMonth() &&
-          d1.getFullYear() === d2.getFullYear();
+        return d1.getUTCDate() === d2.getUTCDate() &&
+          d1.getUTCMonth() === d2.getUTCMonth() &&
+          d1.getUTCFullYear() === d2.getUTCFullYear();
       };
       const dailytrades = userData.trades.filter(trade => isSameDate(trade.date, new Date()));
       // const dailytrades = userData.trades.filter(trade => trade.date === today)
