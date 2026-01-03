@@ -818,7 +818,9 @@ const Admindashboard = ({ route }) => {
                               <option value="TSLA">TSLA (Tesla)</option>
                               <option value="GOOGL">GOOGL (Alphabet)</option>
                               <option value="SPY">SPY (S&P 500 ETF)</option>
+                              <option value="QQQ">QQQ (Nasdaq 100 ETF)</option>
                               <option value="NVDA">NVDA (NVIDIA)</option>
+                              <option value="AMZN">AMZN (Amazon)</option>
                             </optgroup>
                       </select>
 
