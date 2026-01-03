@@ -813,11 +813,13 @@ const Admindashboard = ({ route }) => {
                         </optgroup>
 
                         {/* Stocks */}
-                        <optgroup label="Stocks">
-                          <option value="AAPL">AAPL (Apple)</option>
-                          <option value="TSLA">TSLA (Tesla)</option>
-                          <option value="GOOGL">GOOGL (Alphabet)</option>
-                        </optgroup>
+                            <optgroup label="Stocks">
+                              <option value="AAPL">AAPL (Apple)</option>
+                              <option value="TSLA">TSLA (Tesla)</option>
+                              <option value="GOOGL">GOOGL (Alphabet)</option>
+                              <option value="SPY">SPY (S&P 500 ETF)</option>
+                              <option value="NVDA">NVDA (NVIDIA)</option>
+                            </optgroup>
                       </select>
 
                       {/* <span></span> */}
